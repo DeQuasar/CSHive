@@ -1,0 +1,31 @@
+/*
+    Animaton SCSS
+
+    Holds the animation keyframes for the web page.
+ */
+
+@keyframes slide-up-fadein {
+    0% {
+        opacity:    0;
+        transform:  translate(0px,40px);
+    }
+
+    100% {
+        opacity:    1;
+        transform:  translate(0px,0px);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 1;
+    }
+}

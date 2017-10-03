@@ -1,0 +1,21 @@
+/*
+  Variables SCSS
+
+  Houses the Variables that are used by the website.
+ */
+
+// Font Stack
+$primary-font:   'Quattrocento', serif;
+$secondary-font: 'Quattrocento Sans', sans-serif;
+
+// Color Pallet
+$primary-color:   #16AA89;
+$secondary-color: #50514F;
+
+// Transition Properties
+$speed:  0.2s;
+$easing: ease-in-out;
+
+// Media Query Properties
+$phone:  40.000em;
+$tablet: 48.000em;

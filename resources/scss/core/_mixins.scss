@@ -1,0 +1,116 @@
+/*
+    Mixins SCSS
+
+    Houses useful mixins.
+ */
+
+// Media Query
+@mixin media-query($Size) {
+    @if $Size == 'phone' {
+        @media only screen and (max-width: $phone) { @content; }
+    } @else if $Size == 'tablet' {
+        @media only screen and (max-width: $tablet) { @content; }
+    }
+}
+
+// Box Shadow
+@mixin box-shadow() {
+    box-shadow: 0 7px 6px -6px rgba(0, 0, 0, 0.4);
+}
+
+
+// Text Shadow
+@mixin text-shadow() {
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+// On / Off Switch
+@mixin switch() {
+    .switch {
+        display: none;
+
+        &:checked ~ label {
+            background: $primary-color;
+
+            @include box-shadow;
+
+            &:after {
+                left: 35px;
+
+                background: lighten($primary-color, 5);
+            }
+        }
+
+        & ~ p {
+            color: #E74200;
+
+            @include text-shadow;
+
+            &:before {
+                content: 'Offline';
+            }
+
+            transition: color 100ms $easing;
+        }
+
+        &:checked ~ p {
+            color: $primary-color;
+
+            @include text-shadow;
+
+            &:before {
+                content: 'Online';
+            }
+        }
+
+        &:disabled {
+            & ~ label {
+                background:     rgb(255, 255, 255);
+                pointer-events: none;
+
+                &:after {
+                    background: rgba(255, 255, 255, .8);
+                }
+            }
+        }
+    }
+
+    .switch-label {
+        position:      relative;
+
+        display:       block;
+
+        height:        20px;
+        width:         55px;
+
+        background:    rgb(176, 178, 180);
+        border-radius: 100px;
+
+        cursor:        pointer;
+
+        transition:    all $speed $easing;
+
+        &:after {
+            position: absolute;
+            left:    -2px;
+            top:     -3px;
+
+            display: block;
+            content: '';
+
+            width:  25px;
+            height: 26px;
+
+            background:    darken(rgba(176, 178, 180, 1), 8);
+            border-radius: 100px;
+
+            box-shadow: 0 3px 3px rgba(0,0,0,0.05);
+
+            transition: all $speed $easing;
+        }
+
+        &:active:after {
+            transform: scale(1.45, 0.85);
+        }
+    }
+}

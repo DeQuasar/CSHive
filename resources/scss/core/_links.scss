@@ -1,0 +1,18 @@
+/*
+    Links SCSS
+
+    Default link styling.
+ */
+
+a {
+    color:           rgb(0, 0, 0);
+
+    font-weight:     bold;
+    text-decoration: none;
+
+    transition:      color $speed $easing;
+
+    &:hover {
+        color: rgba(0, 0, 0, 0.8);
+    }
+}

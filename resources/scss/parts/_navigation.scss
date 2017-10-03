@@ -1,0 +1,80 @@
+/*
+    Navigation SCSS
+
+    Holds the Navigation SCSS.
+ */
+
+.nav-bar {
+    padding: 3em 1em;
+
+    background-color: $primary-color;
+
+    @include media-query(phone) {
+        padding: 1em 0;
+    }
+
+    > .container {
+        display:         flex;
+        flex-direction:  row;
+        justify-content: space-between;
+        align-items:     center;
+
+        @include media-query(phone) {
+            flex-direction: column;
+        }
+
+        a {
+            font-weight: lighter;
+        }
+
+        .logo {
+            display:     inherit;
+            align-items: center;
+
+            font-size:      3em;
+            text-transform: uppercase;
+
+            @include text-shadow;
+
+            > img {
+                margin-right: 0.2em;
+
+                width:  100px;
+                height: 100px;
+
+                @include media-query(phone) {
+                    width: 64px;
+                    height: 64px;
+                }
+            }
+        }
+
+        .nav-bar-main {
+            display: flex;
+
+            @include media-query(phone) {
+                margin-top: 1em;
+            }
+
+            > .steam-login {
+                display: inherit;
+
+                padding: 0.8em 1.2em;
+
+                background-color: rgba(255, 255, 255, 1);
+
+                transition: box-shadow $speed $easing;
+
+                &:hover {
+                    @include box-shadow;
+                }
+
+                > .fa {
+                    margin-right: 0.5em;
+
+                    color: green;
+                }
+            }
+        }
+    }
+}

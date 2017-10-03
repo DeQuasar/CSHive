@@ -1,0 +1,45 @@
+/*
+  Core SCSS
+
+  Houses the core SCSS.
+ */
+
+// Section Styling
+
+// Start Sticky Footer
+#site {
+  display:        flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+
+#site-content {
+  flex: 1;
+
+  > div {
+    padding: 0 0.5em;
+  }
+}
+// End Sticky Footer
+
+// Element Container
+.container {
+  display: flex;
+
+  margin: 0 auto;
+
+  width:         100%;
+  max-width:     970px;
+}
+
+.divider {
+  flex: 1;
+
+  border-top:    2px solid #ccc;
+  border-bottom: 2px solid lighten($primary-color, 55);
+
+  .container & {
+    margin: 2em 0;
+  }
+}

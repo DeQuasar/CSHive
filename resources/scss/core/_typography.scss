@@ -1,0 +1,17 @@
+/*
+  Typography SCSS
+
+  Houses the different Typography that is used by the website.
+ */
+
+// Font Styling
+h1, h2, h3, h4, h5 {
+    padding: 0;
+    margin:  0;
+
+    font-family: $primary-font;
+}
+
+p, a, blockquote {
+    font-family: $secondary-font;
+}

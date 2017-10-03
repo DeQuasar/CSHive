@@ -1,0 +1,97 @@
+/*
+    Miner SCSS.
+
+    Miner section SCSS.
+ */
+
+#miner > .container {
+    display:        flex;
+    flex-direction: column;
+
+    margin-top: 1em;
+
+    @include media-query(phone) {
+        margin-top: 1em;
+    }
+
+    > .miner-box {
+        display:         flex;
+        flex-direction:  column;
+        justify-content: space-between;
+        flex:            1;
+
+        background-color: #eee;
+
+        animation: slide-up-fadein 1s;
+
+        @include   box-shadow;
+
+        > .miner-info {
+            display:         inherit;
+            justify-content: space-around;
+
+            @include media-query(phone) {
+                flex-direction:  column;
+                justify-content: space-between;
+            }
+
+            > div {
+                display:        inherit;
+                flex-direction: column;
+                align-items:    center;
+
+                font-size: 2em;
+
+                @include media-query(phone) {
+                    margin-bottom: 1em;
+                }
+
+                > h3 {
+                    padding: 0.5em 0;
+                }
+
+                > h3, p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .miner-menu {
+        display:         flex;
+        justify-content: space-between;
+
+        margin-top: 2em;
+
+        animation:  fade-in 2s;
+
+        > .miner-data {
+            display: inherit;
+
+            > p {
+                margin-right: 1em;
+            }
+        }
+
+        > .miner-toggle {
+            display:     flex;
+            align-items: center;
+
+            margin-right: 0.4em;
+
+            > p {
+                margin-right: 1em;
+
+                &.offline {
+                    color: #CB0000;
+                }
+
+                &.online {
+                    color: $primary-color;
+                }
+            }
+
+            @include switch;
+        }
+    }
+}

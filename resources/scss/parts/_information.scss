@@ -1,0 +1,24 @@
+#information > section > .container{
+    display:         flex;
+    flex-direction:  row;
+    justify-content: space-between;
+    flex-wrap:       wrap;
+
+    > article {
+        width: 45%;
+
+        @include media-query(tablet) {
+            margin-top: 1em;
+
+            width: 100%;
+        }
+
+        &.mission {
+            width: 100%;
+        }
+
+        &.payment {
+            width: 100%;
+        }
+    }
+}
