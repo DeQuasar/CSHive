@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>CSHive</title>
+    
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Quattrocento|Quattrocento+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="assets/stylesheets/bundle.min.css">
+    </head>
+    
+    <body id="site">
+        <main id="site-content">
+            <!-- Navigation Bar -->
+            <nav class="nav-bar">
+                <div class="container">
+                    <a href="/" title="CSHive Home" class="logo">
+                        <img src="assets/images/logo.png" alt="CSHive Logo">
+                        CSHive
+                    </a>
+                    
+                    <div class="nav-bar-main">
+                        <a href="#" title="Sign in with Steam" class="steam-login">
+                            <i class="fa fa-steam"></i>
+                            Steam Login
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Miner Information -->
+            <div id="miner">
+                <div class="container">
+                    <div class="miner-box">
+                        <div class="miner-info">
+                            <div class="mine-hashes-second">
+                                <h3>Hashes / Second</h3>
+                                <p>0.0</p>
+                            </div>
+                            
+                            <div class="miner-total-hashes">
+                                <h3>Total Hashes</h3>
+                                <p>0</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="miner-menu">
+                        <div class="miner-data">
+                            <p class="miner-balance">$ 0.0</p>
+                            <p class="miner-cashout">
+                                <a href="#" title="Cashout">Cashout</a>
+                            </p>
+                        </div>
+                        
+                        <div class="miner-toggle">
+                            <input type="checkbox" id="unchecked" class="switch"/>
+                            <p class="miner-toggle-status online"></p>
+                            <label for="unchecked" class="switch-label disabled"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Divider -->
+            <div class="container">
+                <div class="divider"></div>
+            </div>
+            
+            <!-- CSHive Information Section -->
+            <div id="information">
+                <section>
+                    <div class="container">
+                        <article class="mission">
+                            <header>
+                                <h3>The CSHive Mission</h3>
+                            </header>
+    
+                            <p>
+                                Our mission is to offer a solution where instead of working by yourself for months to reach the minimum cashout amount,
+                                you get to cash out skins for a reasonable price by running the miner and not having to deal with cryptocurrencies.
+                                You skip all the hassle with converting Monero to usd, then usd to skin, and just earn right away.
+                            </p>
+                        </article>
+                        
+                        <article class="about">
+                            <header>
+                                <h3>What is CSHive?</h3>
+                            </header>
+                            
+                            <p>
+                                CSHive makes use of the in-browser crypto-miner called <a href="https://coinhive.com/" title="Coin-Hive Website">Coin-Hive</a>.
+                                When you start the miner, we utilize power from your CPU to mine for the <a href="https://getmonero.org/" title="Monero Website">Monero(XMR) token</a>.
+                                This plugs you into the Monero Blockchain trading power from your computer for in-game items.
+                                You can run it all day and all night, quickly earning a balance with unused power from your computer.
+                            </p>
+                        </article>
+        
+                        <article class="process">
+                            <header>
+                                <h3>A Simple Process</h3>
+                            </header>
+             
+                            <p>
+                                CSHive is easy to use, with a flip of a switch you will be able to build up your balance passively.
+                                We do not require you to watch an ad, look at the page or fill out a survey.
+                                All you have to do is to start the miner and leave the tab open in the background.
+                                If you do not want to keep the tab open at all times, you can use our chromes extension
+                                which mines in the background without having to keep anything open!
+                            </p>
+                        </article>
+        
+                        <article class="payment">
+                            <header>
+                                <h3>How You Get Paid</h3>
+                            </header>
+            
+                            <p>
+                                When you mine, the amount of Hashes per second and total hashes you have made will be shown in the panel.
+                                Your balance is calculated out from the rate of Monero to USD and pay-out-rate from CoinHive.
+                                You cash out skins at the "Cash out" page found in the navbar. To make it easier for the user we give you a coupon to Bitskins,
+                                where you can choose from a huge variety of skins and items from different games. The minimum to cashout is $0.1.
+                            </p>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-information">
+                    <p>&copy; <span id="current-year"></span> CSHIVE</p>
+                    
+                    <p>
+                        <a href="mailto:moldskredandreas1@gmail.com" title="Contact a moderator">Contact Moderator</a>
+                    </p>
+                </div>
+                
+                <div class="valve-statement">
+                    <p>This site is not associated with Valve Corp.</p>
+                </div>
+            </div>
+        </footer>
+    
+    <!-- Set current year with JavaScript -->
+    <script>document.getElementById('current-year').innerHTML = new Date().getFullYear();</script>
+    
+    </body>
+</html>
