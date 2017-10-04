@@ -1,24 +1,42 @@
-#information > section > .container{
-    display:         flex;
-    flex-direction:  row;
-    justify-content: space-between;
-    flex-wrap:       wrap;
+#information {
+    margin-bottom: 1em;
 
-    > article {
-        width: 45%;
+    @include media-query(phone) {
+        margin: 1em 0;
+    }
 
-        @include media-query(tablet) {
-            margin-top: 1em;
+    > section > .container {
+        display:         flex;
+        flex-direction:  row;
+        justify-content: space-between;
+        flex-wrap:       wrap;
 
-            width: 100%;
-        }
+        > article {
+            margin: 1.5em 0;
 
-        &.mission {
-            width: 100%;
-        }
+            width: 45%;
 
-        &.payment {
-            width: 100%;
+            &:first-child {
+                margin: 1em 0;
+            }
+
+            @include media-query(tablet) {
+                margin-top: 1em;
+
+                width:      100%;
+            }
+
+            > header {
+                margin: 0.5em 0;
+            }
+
+            &.mission {
+                width: 100%;
+            }
+
+            &.payment {
+                width: 100%;
+            }
         }
     }
 }

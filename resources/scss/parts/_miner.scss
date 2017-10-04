@@ -96,41 +96,55 @@
 
     // Miner payment section
     .miner-payment {
-        padding: 1em;
 
-        background-color: $primary-color;
-
-        animation:  fade-in 2s;
-
+        // Form styling
         > .form {
-            > .form-group {
-                > p {
-                    color:            #000;
-                    background-color: $secondary-color;
+            padding:          1em;
+
+            background-color: $primary-color;
+
+            animation:        fade-in 2s;
+
+            > div:not(:last-child) {
+                margin-bottom: 2em;
+
+                @include media-query(phone) {
+                    margin-bottom: 1em;
+                }
+            }
+
+            // Miner payment form display
+            .miner-payment-menu {
+                display:         flex;
+                justify-content: space-between;
+                align-items:     center;
+
+                @include media-query(phone) {
+                    flex-direction: column;
+
+                    align-items: stretch;
+                }
+
+                .miner-payment-label, .miner-payment-bitskin-code, .form-button {
+                    padding: 0.5em;
+
+                    @include media-query(phone) {
+                        margin-bottom: 0.5em;
+                    }
+                }
+
+                > .form-button {
+                    &:hover {
+                        color: rgba(0, 0, 0, 0.8);
+                    }
                 }
             }
         }
 
-        // Miner payment form
-        .miner-payment-menu {
-            display:         flex;
-            justify-content: space-between;
-            align-items:     center;
-
-            @include media-query(phone) {
-                flex-direction: column;
-            }
-
-            > .form-button {
-                color:            rgba(0, 0, 0, 1);
-                background-color: $secondary-color;
-
-                &:hover {
-                    color: rgba(0, 0, 0, 0.8);
-                }
-            }
+        // Bitskin helper text
+        .miner-payment-bitskin-info {
+            margin-top: 0.5em;
         }
-
 
     }
 }
