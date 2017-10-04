@@ -8,23 +8,30 @@
     display:        flex;
     flex-direction: column;
 
-    margin-top: 1em;
-
-    @include media-query(phone) {
-        margin-top: 1em;
+    // Spacing for Div elements
+    > div {
+        margin-bottom: 1em;
     }
 
+    // Miner hash rate & total
     > .miner-box {
         display:         flex;
         flex-direction:  column;
         justify-content: space-between;
         flex:            1;
 
-        background-color: #eee;
+        padding: 2em 0;
+
+        background-color: $secondary-color;
+        border-bottom:    2px solid $primary-color;
 
         animation: slide-up-fadein 1s;
 
         @include   box-shadow;
+
+        @include media-query(phone) {
+            padding: 1em 0;
+        }
 
         > .miner-info {
             display:         inherit;
@@ -43,7 +50,7 @@
                 font-size: 2em;
 
                 @include media-query(phone) {
-                    margin-bottom: 1em;
+                    margin-bottom: 0.5em;
                 }
 
                 > h3 {
@@ -57,11 +64,10 @@
         }
     }
 
+    // Miner menu - Total earned, cashout, and switch
     .miner-menu {
         display:         flex;
         justify-content: space-between;
-
-        margin-top: 2em;
 
         animation:  fade-in 2s;
 
@@ -73,6 +79,7 @@
             }
         }
 
+        // Miner toggle switch
         > .miner-toggle {
             display:     flex;
             align-items: center;
@@ -81,17 +88,49 @@
 
             > p {
                 margin-right: 1em;
-
-                &.offline {
-                    color: #CB0000;
-                }
-
-                &.online {
-                    color: $primary-color;
-                }
             }
 
             @include switch;
         }
+    }
+
+    // Miner payment section
+    .miner-payment {
+        padding: 1em;
+
+        background-color: $primary-color;
+
+        animation:  fade-in 2s;
+
+        > .form {
+            > .form-group {
+                > p {
+                    color:            #000;
+                    background-color: $secondary-color;
+                }
+            }
+        }
+
+        // Miner payment form
+        .miner-payment-menu {
+            display:         flex;
+            justify-content: space-between;
+            align-items:     center;
+
+            @include media-query(phone) {
+                flex-direction: column;
+            }
+
+            > .form-button {
+                color:            rgba(0, 0, 0, 1);
+                background-color: $secondary-color;
+
+                &:hover {
+                    color: rgba(0, 0, 0, 0.8);
+                }
+            }
+        }
+
+
     }
 }
