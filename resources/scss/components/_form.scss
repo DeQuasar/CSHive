@@ -48,11 +48,6 @@
         > p {
             padding: 0.5em;
 
-            color:      #FFF;
-            background: $primary-color;
-
-            @include box-shadow;
-
             &.left {
                 margin-right: 1em;
 
@@ -90,12 +85,8 @@
         }
 
         &.form-button {
-            color:      rgba(0, 0, 0, 1);
-            background: $primary-color;
-            border:     none;
 
-            transition: box-shadow $speed $easing,
-                        color $speed $easing;
+            transition: $speed $easing;
 
             &:hover {
                 cursor: pointer;
