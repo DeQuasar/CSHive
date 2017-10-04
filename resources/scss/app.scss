@@ -11,8 +11,11 @@
 @import 'core/typography';
 @import 'core/animation';
 @import 'core/core';
-@import 'core/links';
-@import 'core/form';
+
+// Components SCSS
+@import 'components/card';
+@import 'components/links';
+@import 'components/form';
 
 // Parts SCSS
 @import 'parts/navigation';
