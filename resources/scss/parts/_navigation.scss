@@ -56,23 +56,42 @@
                 margin-top: 1em;
             }
 
-            > .steam-login {
-                display: inherit;
+            > .nav-bar-user {
+                display:     inherit;
+                align-items: center;
 
-                padding: 0.8em 1.2em;
+                padding:      0 1.2em;
+                margin-right: 1em;
 
                 background-color: rgba(255, 255, 255, 1);
 
-                transition: box-shadow $speed $easing;
+                @include box-shadow;
 
-                &:hover {
-                    @include box-shadow;
+                > img {
+                    margin-left: 1em;
                 }
+            }
 
-                > .fa {
-                    margin-right: 0.5em;
+            > .steam-login {
+                display: inherit;
 
-                    color: green;
+                > .steam-login-button {
+                    padding: 0.8em 1.2em;
+
+                    background-color: rgba(255, 255, 255, 1);
+
+                    transition: box-shadow $speed $easing,
+                                color $speed $easing;
+
+                    &:hover {
+                        @include box-shadow;
+                    }
+
+                    > .fa {
+                        margin-right: 0.5em;
+
+                        color: green;
+                    }
                 }
             }
         }
