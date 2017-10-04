@@ -39,8 +39,8 @@
             > img {
                 margin-right: 0.2em;
 
-                width:  100px;
-                height: 100px;
+                width:  64px;
+                height: 64px;
 
                 @include media-query(phone) {
                     width: 64px;
