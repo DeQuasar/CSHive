@@ -1,0 +1,19 @@
+.card {
+    color:      #000;
+	background: #FFF;
+	border:     none;
+
+	transition: box-shadow $speed $easing,
+				color $speed $easing;
+
+	@include box-shadow;
+
+	&.card-button {
+        box-shadow: none;
+
+
+        &:hover {
+            @include box-shadow;
+        }
+	}
+}
