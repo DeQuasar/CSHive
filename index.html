@@ -22,10 +22,17 @@
                     </a>
                     
                     <div class="nav-bar-main">
-                        <a href="#" title="Sign in with Steam" class="steam-login">
-                            <i class="fa fa-steam"></i>
-                            Steam Login
-                        </a>
+                        <p class="nav-bar-user">
+                            Dayman Champion Of Korea
+                            <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/5b/5be3562ab6748e8596ce3eae62ab25a1d63daeab.jpg">
+                        </p>
+                        
+                        <p class="steam-login">
+                            <a href="#" title="Sign in with Steam" class="steam-login-button">
+                                <i class="fa fa-steam"></i>
+                                Steam Login
+                            </a>
+                        </p>
                     </div>
                 </div>
             </nav>
@@ -50,9 +57,6 @@
                     <div class="miner-menu">
                         <div class="miner-data">
                             <p class="miner-balance">$ 0.0</p>
-                            <p class="miner-cashout">
-                                <a href="#" title="Cashout">Cashout</a>
-                            </p>
                         </div>
                         
                         <div class="miner-toggle">
@@ -61,12 +65,28 @@
                             <label for="unchecked" class="switch-label disabled"></label>
                         </div>
                     </div>
+    
+                    <div class="miner-payment">
+                        <form action="" method="post" id="miner-submit-payment" class="form column">
+                            <div class="miner-payment-menu">
+                                <label for="miner-payment-amount">Payment Amount</label>
+                                <p class="">Bitskin Code: DA8SA97SA9ASD8AS</p>
+                                <input type="submit" name="miner-payment-submit" value="Withdraw" id="miner-payment-submit" class="form-button">
+                            </div>
+                            
+                            <div class="form-group">
+                                <p class="left">Min Amount <span>0.1</span></p>
+                                <input type="number" min="0.1" max="" value="0.0" id="miner-payment-amount" class="validate">
+                                <p class="right">Max Amount <span>0.500</span></p>
+                            </div>
+                            
+                            <p class="miner-payment-bitskin-info helper">
+                                Copy your code then - redeem your coupon code by
+                                <a href="#" title="Coupon Redemption">Clicking Here</a>
+                            </p>
+                        </form>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- Divider -->
-            <div class="container">
-                <div class="divider"></div>
             </div>
             
             <!-- CSHive Information Section -->
