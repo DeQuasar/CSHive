@@ -1101,6 +1101,11 @@ a:hover {
   margin-top: 0.5em;
 }
 
+/*
+    Information
+
+    Houses The Information SCSS.
+ */
 #information {
   margin-bottom: 1em;
 }

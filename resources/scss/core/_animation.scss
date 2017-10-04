@@ -4,6 +4,7 @@
     Holds the animation keyframes for the web page.
  */
 
+// Slide Up Animation
 @keyframes slide-up-fadein {
     0% {
         opacity:    0;
@@ -16,6 +17,7 @@
     }
 }
 
+// Fade In Animation
 @keyframes fade-in {
     0% {
         opacity: 0;
